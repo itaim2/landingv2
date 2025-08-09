@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>מדיניות פרטיות – Bakecost</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#FFF9F4;
+      --card:#ffffff;
+      --text:#1a1a1a;
+      --muted:#555;
+      --accent:#FF7A18;
+      --border:#FFE0C2;
+    }
+    body{margin:0;background:var(--bg);font-family:'Rubik',sans-serif;color:var(--text);}
+    .wrap{max-width:900px;margin:0 auto;padding:2.5rem 1.25rem;}
+    header{padding:1rem 0 0.5rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem;}
+    h1{font-size:2rem;margin:.5rem 0 0;}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.25rem 1.25rem;margin:1rem 0;box-shadow:0 4px 10px rgba(0,0,0,.04);}
+    h2{font-size:1.25rem;margin:.25rem 0 0.75rem 0}
+    p, ul{line-height:1.7;color:var(--muted);margin:.5rem 0}
+    ul{margin-right:1rem}
+    a{color:var(--accent);text-decoration:none;pointer-events: none;}
+      /* הסרה מוחלטת של ההקלקה, אם רוצים */
+    }
+    .footer{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.95rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="display:flex;align-items:center;gap:.5rem">
+      </div>
+      <h1>מדיניות פרטיות</h1>
+    </header>
+
+    <section class="card">
+      <p>דף זה אוסף פרטים מזהים כגון שם מלא, טלפון וכתובת דוא"ל, הנמסרים מרצון במסגרת טופס ההרשמה.</p>
+      <p>הפרטים משמשים למטרות יצירת קשר, מתן מידע ועדכונים, וכן לשם שיפור השירותים שלנו.</p>
+      <p>בנוסף, האתר עושה שימוש בקובצי Cookie ובפיקסלים (לרבות Facebook Pixel) לצורך ניתוח פעילות, שיפור חוויית הגלישה והתאמת קמפיינים פרסומיים.</p>
+      <p>המידע נשמר בצורה מאובטחת ואינו נמסר לצדדים שלישיים, למעט ספקים ושירותים המשמשים אותנו לצורך מתן השירות (כגון מערכות דיוור), והכל בהתאם לדין.</p>
+      <p>ניתן לבקש עיון, תיקון או מחיקה של המידע האישי בכל עת באמצעות פנייה לכתובת <a href="mailto:team@bakecost.com">team@bakecost.com</a>.</p>
+      <p>ניתן לחסום או למחוק קובצי Cookie דרך הגדרות הדפדפן שלך, וכן להפעיל חוסמי פרסומות/מעקבים על פי בחירתך.</p>
+      <p>ייתכנו עדכונים במדיניות זו מעת לעת. המשך שימושך באתר מהווה הסכמה למדיניות המעודכנת.</p>
+    </section>
+
+    <div class="footer">
+      עודכן לאחרונה: <span id="updated-at"></span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('updated-at').textContent = new Date().toLocaleDateString('he-IL');
+  </script>
+</body>
+</html>

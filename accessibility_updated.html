@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>הצהרת נגישות – Bakecost</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#FFF9F4;
+      --card:#ffffff;
+      --text:#1a1a1a;
+      --muted:#555;
+      --accent:#FF7A18;
+      --border:#FFE0C2;
+    }
+    body{margin:0;background:var(--bg);font-family:'Rubik',sans-serif;color:var(--text);}
+    .wrap{max-width:900px;margin:0 auto;padding:2.5rem 1.25rem;}
+    header{padding:1rem 0 0.5rem;border-bottom:1px solid var(--border);margin-bottom:1.5rem;}
+    h1{font-size:2rem;margin:.5rem 0 0;}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.25rem 1.25rem;margin:1rem 0;box-shadow:0 4px 10px rgba(0,0,0,.04);}
+    p, ul{line-height:1.7;color:var(--muted);margin:.5rem 0}
+    a{color:var(--accent);text-decoration:none;  pointer-events: none; /* הסרה מוחלטת של ההקלקה, אם רוצים */
+    }
+    .footer{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--border);font-size:.95rem;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div style="display:flex;align-items:center;gap:.5rem">
+      </div>
+      <h1>הצהרת נגישות</h1>
+    </header>
+
+    <section class="card">
+      <p>נכון לעכשיו, אתר <strong>Bakecost</strong> אינו מונגש באופן מלא. הסיבה לכך היא שאנו פועלים כעוסק פטור, ועל פי החוק הקיים אין לנו חובת הנגשה בשלב זה.</p>
+      <p>עם זאת, חשוב לנו לאפשר חוויית שימוש שוויונית לכלל הגולשים, ולכן אנו פועלים כבר עכשיו להנגשת האתר באופן מלא. בימים אלה אנו בתהליך עבודה עם ספק נגישות מקצועי, והאתר יעבור התאמות נגישות בהקדם האפשרי.</p>
+      <p>ההנגשה המתוכננת תכלול התאמות במבנה האתר, בתכנים, בצבעים ובאלמנטים הגרפיים, כך שיהיו נוחים לשימוש עם טכנולוגיות מסייעות ויתאימו לצרכים מגוונים.</p>
+      <p>אם נתקלת בקושי בשימוש באתר, נשמח אם תעדכן אותנו כדי שנוכל לטפל בכך במהירות.</p>
+      <p>לפניות בנושא נגישות: <a href="mailto:team@bakecost.com">team@bakecost.com</a></p>
+    </section>
+
+    <div class="footer">
+      עודכן לאחרונה: <span id="updated-at"></span>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('updated-at').textContent = new Date().toLocaleDateString('he-IL');
+  </script>
+</body>
+</html>
