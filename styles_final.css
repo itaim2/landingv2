@@ -96,8 +96,26 @@ body {
             max-width: 700px;
             margin: 0 auto 3rem;
         }
+        .hero p#sday{
+            font-weight: bold;
+            font-size: 1.35rem;
+        }
+#timer {
+    position: fixed;       /* צמוד למסך */
+    bottom: 0;             /* בתחתית */
+    left: 0;
+    width: 100%;           /* לכל הרוחב */
+    background: #FF7A18;      /* רקע כהה */
+    color: #fff;           /* טקסט בהיר */
+    text-align: center;    /* ממורכז */
+    padding: 10px 0;       /* רווח פנימי */
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 9999;         /* תמיד מעל הכל */
+}
 
-        .btn-main {
+
+.btn-main {
             background: #FF7A18;
             color: #fff;
             padding: 1rem 2rem;
@@ -731,7 +749,7 @@ nav a:hover::after,
 
 .form-box h3 {
     margin-top: 0;
-    font-weight: 800;
+    font-weight: 300;
     color: #1a1a1a;
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
@@ -740,10 +758,11 @@ nav a:hover::after,
 }
 
 .form-box p {
-    color: #444;
+    color: #1a1a1a;
     margin-bottom: 1.5rem;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.35rem;
+    font-weight: bold;
 
 
 }
@@ -771,7 +790,7 @@ button {
     border-radius: 999px;
     font-size: 1rem;
     font-weight: bold;
-    background: linear-gradient(to left, #FFB347, #FF7A18);
+    background:#FF7A18;
     color: white;
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
@@ -780,7 +799,7 @@ button {
 
 button:hover {
     transform: scale(1.05);
-    background: linear-gradient(to left, #FFA500, #FF6B00);
+    background: #FF6B00;
 }
 .form-button{
     margin-top:1rem;
@@ -799,6 +818,7 @@ button:hover {
 
 /* מומלץ כללי */
 *{ box-sizing:border-box; }
+
 
 
 
