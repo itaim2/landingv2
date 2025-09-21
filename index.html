@@ -415,7 +415,7 @@
         }
 
         /* 6) וידאו – תיקון מובייל (טאפ עוצר/מנגן) */
-        document.querySelectorAll('[data-video]').forEach(card => {
+        /*document.querySelectorAll('[data-video]').forEach(card => {
             const video   = card.querySelector('video');
             const overlay = card.querySelector('.play-overlay');
             const isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
@@ -466,24 +466,42 @@
             video.addEventListener('ended', () => { setCss(); overlay && (overlay.style.pointerEvents='auto'); });
 
             setCss();
-        });
+        });*/
         /* 7) גלילה ל־.form-box מכל כפתור שאינו כפתור הטופס */
         document.addEventListener('click', (e) => {
+            console.log('הגעתי ל-document listener, נלחץ על:', e.target);
+
             const btn = e.target.closest('button');
-            if (!btn) return;
+            if (!btn) {
+                console.log('לא נלחץ על כפתור → יוצא');
+                return;
+            }
+
+            console.log('זיהיתי כפתור:', btn);
 
             // לא מגלילים מכפתור שליחת הטופס או מכפתור בתוך קופסת הטופס
-            if (btn.classList.contains('form-button') || btn.closest('.form-box')) return;
+            if (btn.classList.contains('form-button')) {
+                console.log('זה כפתור שליחת הטופס → לא מגלילים');
+                return;
+            }
+            if (btn.closest('.form-box')) {
+                console.log('זה כפתור שנמצא בתוך ה-form-box → לא מגלילים');
+                return;
+            }
 
             const formBox = document.querySelector('.cta-section');
-            if (!formBox) return;
+            if (!formBox) {
+                console.log('לא נמצאה cta-section בדף → יוצא');
+                return;
+            }
 
             e.preventDefault();
             const headerHeight = document.querySelector('header')?.offsetHeight || 0;
             const y = formBox.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+
+            console.log('מגלילים אל cta-section, יעד Y:', y, 'גובה ההדר:', headerHeight);
             window.scrollTo({ top: y, behavior: 'smooth' });
         });
-    });
     /*טופס הרשמה*/
     function responder_validation(form) {
         var inputs = form.getElementsByTagName('input');
@@ -530,7 +548,7 @@
 
         fbq('track', 'Lead');
         return true;
-    }
+    }});
 
 </script>
 </body>
